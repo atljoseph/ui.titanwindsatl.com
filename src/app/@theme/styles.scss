@@ -1,0 +1,22 @@
+
+// order matters here:
+
+// (1) material theme
+// available prebuilt themes:
+// ---------------------------------
+// (light)
+// deeppurple-amber.css
+// indigo-pink.css
+// (dark)
+// pink-bluegrey.css
+// purple-green.css
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "./theme.scss";
+
+// (2) typography
+@import "./typography.scss";
+
+// (3) globals
+body {
+    margin: 0px;
+}
