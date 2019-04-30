@@ -10,7 +10,6 @@ import {
   MatCheckboxModule,
   MatDialogModule
 } from '@angular/material';
-import 'hammerjs';
 
 @NgModule({
   declarations: [],
