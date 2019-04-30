@@ -8,6 +8,7 @@ export const environment: IEnvironment = {
   ...common,
   production: false,
   enableLogging: true,
+  envCode: 'DEV'
 };
 
 /*

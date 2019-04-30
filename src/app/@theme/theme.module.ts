@@ -7,7 +7,8 @@ import {
   MatIconModule,
   MatToolbarModule,
   MatButtonModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatDialogModule
 } from '@angular/material';
 import 'hammerjs';
 
@@ -16,16 +17,19 @@ import 'hammerjs';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
+    
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDialogModule
   ],
   exports: [
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDialogModule
   ]
 })
 export class ThemeModule { }

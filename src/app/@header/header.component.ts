@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 import { HeaderService } from './header.service';
 
@@ -9,11 +9,12 @@ import { HeaderService } from './header.service';
 })
 export class HeaderComponent implements OnInit {
 
+  @ViewChild('menuButton') menuButton: ElementRef;
+
   constructor(
     public headerService: HeaderService
   ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

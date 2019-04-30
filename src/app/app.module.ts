@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { MenuModule } from './@menu';
 import { CoreModule } from './@core';
 import { HeaderModule } from './@header';
 import { ContentModule } from './@content';
@@ -14,9 +15,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    CoreModule,
     HeaderModule,
     ContentModule,
+    MenuModule,
+    CoreModule,
     FeaturesModule,
   ],
   providers: [

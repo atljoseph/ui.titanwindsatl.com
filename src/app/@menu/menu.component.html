@@ -1,3 +1,10 @@
-<p>
-  menu works!
-</p>
+<div class="menu" [@slideInOut]="animationState">
+  <mat-toolbar color="accent" [class.mat-elevation-z2]="true">
+    <span class="menu-title mat-body">Menu</span>
+    <span class="greedy"></span>
+    <button mat-button class="menu-close-button"
+      (click)="menuService.closeMenu()">
+      <mat-icon aria-label="Close Menu">close</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>

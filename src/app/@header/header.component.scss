@@ -1,14 +1,16 @@
 
-.greedy{
-    flex: 1 1 auto;
-}
-
-.title {
+.header-title {
     font-weight: bold;
     font-size: 1.6rem !important;
 }
 
-// .menu-button {
-//     padding: unset;
-//     // min-width: unset;
-// }
+.header-menu-button {
+    padding: unset !important;
+    min-width: 2rem !important;
+}
+
+// .mat-icon {
+//     width: 100px;
+//     height: 100px;
+//     font-size: 32px;
+//   }

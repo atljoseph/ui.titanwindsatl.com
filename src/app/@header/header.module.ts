@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ThemeModule } from '../@theme';
@@ -15,7 +15,15 @@ import { HeaderComponent } from './header.component';
     ThemeModule
   ], 
   providers: [
-    HeaderService
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (instance: HeaderService) => {
+        // console.log(instance, FullScreenService);
+        return () => instance.appOnInit();
+      },
+      deps: [HeaderService],
+      multi: true
+    },
   ],
   exports: [
     HeaderComponent
