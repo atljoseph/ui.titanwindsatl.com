@@ -1,0 +1,35 @@
+
+// ---- fullscreen modal ----------------
+.fullscreen {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+}
+.cdk-overlay-pane {
+    @extend .fullscreen;
+}
+.modal-overlay .mat-dialog-container {
+    border-radius: 0px;
+    padding: 0;
+    @extend .fullscreen;
+}
+// --------------------------------------
+
+// ---- modal ---------------------------
+.modal {
+
+    &-title {
+        font-weight: bold;
+        font-size: 1.6rem !important;
+    }
+
+    &-close-button {
+        // padding: 0.2rem;
+        // min-width: unset;
+        padding: unset;
+        min-width: 2rem;
+    }
+
+}
+// -------------------------------------

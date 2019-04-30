@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService} from '../../@modal/modal.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   title = 'titanwindsatl.com';
 
-  constructor() { }
+  constructor(
+    private modalService: ModalService
+  ) { }
 
   ngOnInit() {
+  }
+
+  openModal() {
+    this.modalService.openMenu();
   }
 
 }
