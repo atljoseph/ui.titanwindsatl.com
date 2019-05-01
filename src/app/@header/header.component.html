@@ -1,11 +1,11 @@
 <ng-container *ngIf="headerService.isHeaderVisible | async">
-  <mat-toolbar color="primary" class="mat-elevation-z2">
-    <span class="header-title mat-body">Titan Winds Quintet</span>
+  <mat-toolbar color="primary" class="header-toolbar">
+    <span class="header-title mat-body">Titan Winds <span class="header-title-long">Quintet</span></span>
     <span class="greedy"></span>
     <button mat-button 
       #menuButton class="header-menu-button"
       (click)="headerService.clickMenuButton()">
-      <mat-icon class="header-menu-icon">menu</mat-icon>
+      <mat-icon color="accent" class="header-menu-icon">menu</mat-icon>
     </button>
   </mat-toolbar>
 </ng-container>

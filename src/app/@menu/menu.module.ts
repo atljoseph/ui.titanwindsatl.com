@@ -1,5 +1,6 @@
 import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { ThemeModule } from '../@theme';
 
@@ -13,21 +14,14 @@ import { MenuComponent } from './menu.component';
   ],
   imports: [
     CommonModule,
+    RouterModule.forChild([]),
     ThemeModule
   ],
   entryComponents: [
     MenuComponent,
   ],
   providers: [
-    {
-      provide: APP_INITIALIZER,
-      useFactory: (instance: MenuService) => {
-        // console.log(instance, FullScreenService);
-        return () => instance.appOnInit();
-      },
-      deps: [MenuService],
-      multi: true
-    },
+    MenuService,
   ],
   exports: [
     MenuComponent

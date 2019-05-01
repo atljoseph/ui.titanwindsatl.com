@@ -1,20 +1,18 @@
 import { Injectable, ElementRef } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { debounceTime, map } from 'rxjs/operators';
-import { IHeaderModuleService, IHeaderClick } from './header.types';
+import { IHeaderClick } from './header.types';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HeaderService implements IHeaderModuleService {
+export class HeaderService {
 
   isHeaderVisible: BehaviorSubject<boolean> = new BehaviorSubject(true);
   menuButtonClicked: Subject<IHeaderClick> = new Subject<IHeaderClick>();
   private menuButtonClickCount: number = 0;
 
-  constructor() { }
-
-  appOnInit(): void { 
+  constructor() { 
     this.isHeaderVisible.subscribe(isVisible => {
       console.log('isHeaderVisible', isVisible);
     });

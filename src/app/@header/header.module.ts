@@ -15,15 +15,7 @@ import { HeaderComponent } from './header.component';
     ThemeModule
   ], 
   providers: [
-    {
-      provide: APP_INITIALIZER,
-      useFactory: (instance: HeaderService) => {
-        // console.log(instance, FullScreenService);
-        return () => instance.appOnInit();
-      },
-      deps: [HeaderService],
-      multi: true
-    },
+    HeaderService,
   ],
   exports: [
     HeaderComponent

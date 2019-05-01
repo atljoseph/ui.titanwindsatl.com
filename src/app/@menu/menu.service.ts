@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { MatDialog } from '@angular/material';
-import { IMenuModuleService } from './menu.types';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MenuService implements IMenuModuleService {
+export class MenuService {
 
   isMenuVisible: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
@@ -16,10 +15,6 @@ export class MenuService implements IMenuModuleService {
     this.isMenuVisible.subscribe(isVisible => {
       console.log('isMenuVisible', isVisible);
     });
-  }
-
-  appOnInit() {
-    
   }
 
   openMenu() {

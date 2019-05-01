@@ -1,0 +1,27 @@
+
+.hover-scale {
+    transition: all .2s ease-in-out;
+    // default 'transform-origin' is center
+
+    &:hover {
+        transform: scale(1.25);
+        transition: all .2s ease-in-out;
+    }
+
+    &-top-left {
+        transform-origin: 0 0;
+    }
+
+    &-center {
+        transform-origin: center center;
+    }
+}
+
+// .hover-translate {
+//     transition: all .2s ease-in-out;
+
+//     &:hover {
+//         transform: translateX('');
+//         transition: all .2s ease-in-out;
+//     }
+// }

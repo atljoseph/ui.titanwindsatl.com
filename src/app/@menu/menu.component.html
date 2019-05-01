@@ -1,13 +1,27 @@
+<!-- *ngIf="menuService.isMenuVisible | async" -->
 <div class="menu" [@slideInOut]="animationState">
-  <mat-toolbar color="accent" [class.mat-elevation-z2]="true">
+  <mat-toolbar color="primary" class="menu-toolbar">
     <span class="menu-title mat-body">Menu</span>
     <span class="greedy"></span>
-    <button mat-button class="menu-close-button" 
-      (click)="menuService.closeMenu()">
-      <mat-icon class="menu-close-icon">close</mat-icon>
+    <button mat-button class="menu-close-button" (click)="menuService.closeMenu()">
+      <mat-icon color="accent" class="menu-close-icon">close</mat-icon>
     </button>
   </mat-toolbar>
-  <div class="menu-item-section mat-typography">
-    <h1 class="menu-item-text" routerLink="/">Item</h1>
+  <div class="menu-item-section">
+    <h2 class="menu-item" routerLink="/">
+      <span class="menu-item-selector">>&nbsp;</span>
+      <span class="menu-item-text">Home</span>
+      <!-- <span class="menu-item-selector">&nbsp;<</span> -->
+    </h2>
+    <h2 class="menu-item" routerLink="/">
+      <span class="menu-item-selector">>&nbsp;</span>
+      <span class="menu-item-text">Members</span>
+      <!-- <span class="menu-item-selector">&nbsp;<</span> -->
+    </h2>
+    <h2 class="menu-item" routerLink="/">
+      <span class="menu-item-selector">>&nbsp;</span>
+      <span class="menu-item-text">Contact</span>
+      <!-- <span class="menu-item-selector">&nbsp;<</span> -->
+    </h2>
   </div>
 </div>

@@ -33,15 +33,7 @@ import { CoreComponent } from './core.component';
     CoreComponent
   ],
   providers: [
-    {
-      provide: APP_INITIALIZER,
-      useFactory: (instance: CoreService) => {
-        // console.log(instance, FullScreenService);
-        return () => instance.appOnInit();
-      },
-      deps: [CoreService],
-      multi: true
-    },
+    CoreService,
     {
       provide: APP_INITIALIZER,
       useFactory: (instance: LogService) => {
