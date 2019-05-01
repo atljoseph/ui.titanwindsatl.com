@@ -1,10 +1,10 @@
 
-<mat-toolbar color="primary" [class.mat-elevation-z2]="true">
+<mat-toolbar color="primary" class="modal-toolbar">
   <span class="modal-title mat-body">{{ title }}</span>
   <span class="greedy"></span>
   <button mat-button class="modal-close-button"
     (click)="closeModal()">
-    <mat-icon>close</mat-icon>
+    <mat-icon color="accent" class="modal-close-icon">close</mat-icon>
   </button>
 </mat-toolbar>
 

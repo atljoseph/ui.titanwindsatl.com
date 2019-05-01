@@ -1,10 +1,16 @@
 
+@import '../@theme/theme.scss';
+
+:host {
+    @extend .mat-typography;
+}
+
 // ---- fullscreen modal ----------------
 .fullscreen {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    height: 100vh !important;
-    max-height: 100vh !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
 }
 .cdk-overlay-pane {
     @extend .fullscreen;
@@ -17,18 +23,33 @@
 // --------------------------------------
 
 // ---- modal ---------------------------
+
+$fontSize: 1.7rem;
+$iconSize: $fontSize * 1.3;
+
 .modal {
+
+    &-toolbar {
+        @extend .mat-elevation-z6;
+    }
 
     &-title {
         font-weight: bold;
         font-size: 1.6rem !important;
+        color: $color-accent;
     }
 
     &-close-button {
-        // padding: 0.2rem;
-        // min-width: unset;
-        padding: unset;
-        min-width: 2rem;
+        padding: unset !important;
+        min-width: $iconSize !important;
+        @extend .hover-scale;
+        @extend .hover-scale-center;
+    }
+
+    &-close-icon {
+        height: $iconSize !important;
+        width: $iconSize !important;
+        font-size: $iconSize !important;
     }
 
 }
