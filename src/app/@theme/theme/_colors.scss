@@ -5,14 +5,16 @@
 @include mat-core();
 
 // Define your application's custom theme.
-$app-primary: mat-palette($mat-blue-grey);//$mat-indigo);
-$app-accent:  mat-palette($mat-amber, A100);
+$primary: mat-palette($mat-blue-grey);//$mat-indigo);
+$accent:  mat-palette($mat-amber, A100);
+$warn:  mat-palette($mat-red);
 
-$app-theme: mat-light-theme($app-primary, $app-accent);
+$theme: mat-light-theme($primary, $accent, $warn);
 
 // Include theme styles for Angular Material components.
-@include angular-material-theme($app-theme);
+@include angular-material-theme($theme);
 
 // make these colors available to regular scss
-$primary: mat-color($app-primary);
-$accent: mat-color($app-accent);
+$color-primary: mat-color($primary);
+$color-accent: mat-color($accent);
+$color-warn: mat-color($warn);
