@@ -2,7 +2,7 @@
   <!-- fixed -->
   <div >
     <mat-toolbar color="primary" class="header-toolbar">
-      <span class="header-title mat-body">{{ headerService.headerTitleHtml | async }}</span>
+      <span class="header-title mat-body">{{ headerService.headerTitle | async }}</span>
       <span class="greedy"></span>
       <button mat-button #menuButton class="header-menu-button" (click)="headerService.clickMenuButton()">
         <mat-icon color="accent" class="header-menu-icon">menu</mat-icon>

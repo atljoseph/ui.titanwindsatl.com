@@ -23,6 +23,23 @@ $footerHeight: 0.75rem;
     flex: 1 1 auto;
     flex-direction: row;
 
+    @extend .mat-typography;
+
+    &-text {
+        font-size: $footerHeight * 0.5;
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-version-info {
+        @extend .footer-text;
+        padding-left: 1rem;
+        color: $color-accent;
+        justify-content: flex-start;
+    }
+
     &-horn {
         height: inherit;
         display: flex;

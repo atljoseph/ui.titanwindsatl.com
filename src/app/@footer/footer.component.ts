@@ -1,4 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-footer',
@@ -8,9 +10,15 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  @Input() showVersionInfo: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  get versionInfo(): string {
+    return `Version ${environment.version}`;
   }
 
 }

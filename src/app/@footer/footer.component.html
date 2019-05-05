@@ -1,5 +1,7 @@
 <div class="footer">
-  <div class="footer-horn"></div>
+  <div class="footer-horn">
+    <span *ngIf="showVersionInfo" class="footer-version-info">{{ versionInfo }}</span>
+  </div>
   <div class="footer-bassoon"></div>
   <div class="footer-flute"></div>
   <div class="footer-oboe"></div>
