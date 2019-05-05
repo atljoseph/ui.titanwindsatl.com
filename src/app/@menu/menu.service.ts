@@ -10,11 +10,9 @@ export class MenuService {
   isMenuVisible: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   constructor(
-    public dialogService: MatDialog
+    public dialogService: MatDialog,
   ) { 
-    this.isMenuVisible.subscribe(isVisible => {
-      console.log('isMenuVisible', isVisible);
-    });
+    
   }
 
   openMenu() {

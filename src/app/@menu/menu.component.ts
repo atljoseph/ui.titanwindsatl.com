@@ -10,9 +10,9 @@ import { trigger, state, style, transition, animate, } from '@angular/animations
   // changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('slideInOut', [
-      state('void', style({ transform: 'translateY(-100%)' })),
-      state('enter', style({ transform: 'translateY(0)' })),
-      state('leave', style({ transform: 'translateY(-100%)' })),
+      state('void', style({ opacity: 0, transform: 'translateY(-100%)' })),
+      state('enter', style({ opacity: 1, transform: 'translateY(0)' })),
+      state('leave', style({ opacity: 0, transform: 'translateY(-100%)' })),
       transition('* => *', animate('400ms cubic-bezier(0.25, 0.8, 0.25, 1)'))
     ])
   ]

@@ -3,12 +3,11 @@ import { ModalService } from '../../@modal/modal.service';
 import { HeaderService } from '../../@header/header.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-members',
+  templateUrl: './members.component.html',
+  styleUrls: ['./members.component.scss']
 })
-export class HomeComponent implements OnInit {
-  title = 'titanwindsatl.com';
+export class MembersComponent implements OnInit {
 
   constructor(
     private modalService: ModalService,
@@ -16,7 +15,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.headerService.headerTitleHtml.next('Titan Winds');
+    this.headerService.headerTitleHtml.next('Meet Us');
   }
 
   openModal() {

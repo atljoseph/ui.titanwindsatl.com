@@ -9,18 +9,17 @@ import { ModalComponent } from './modal.component';
 })
 export class ModalService {
 
-  isMenuVisible: BehaviorSubject<boolean> = new BehaviorSubject(true);
+  isModalVisible: BehaviorSubject<boolean> = new BehaviorSubject(true);
+  modalAfterClosedResult: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
   constructor(
-    public dialogService: MatDialog
+    public dialogService: MatDialog,
   ) { 
-    this.isMenuVisible.subscribe(isVisible => {
-      console.log('isMenuVisible', isVisible);
-    });
+   
   }
 
   openMenu() {
-    this.isMenuVisible.next(true);
+    this.isModalVisible.next(true);
     // open dialog
     const dialogRef = this.dialogService.open(ModalComponent, {
       panelClass: 'modal-overlay',
@@ -29,8 +28,9 @@ export class ModalService {
     });
     // listen for the close event, and also result, if any
     dialogRef.afterClosed().subscribe(result => {
-      console.log('dialogRef.afterClosed', result);
-      this.isMenuVisible.next(false);
+      console.log('', result);
+      this.modalAfterClosedResult.next(result);
+      this.isModalVisible.next(false);
     });
   }
   

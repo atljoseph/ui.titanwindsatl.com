@@ -8,17 +8,14 @@ import { IHeaderClick } from './header.types';
 })
 export class HeaderService {
 
+  headerTitleHtml: BehaviorSubject<string> = new BehaviorSubject('');
   isHeaderVisible: BehaviorSubject<boolean> = new BehaviorSubject(true);
   menuButtonClicked: Subject<IHeaderClick> = new Subject<IHeaderClick>();
   private menuButtonClickCount: number = 0;
 
-  constructor() { 
-    this.isHeaderVisible.subscribe(isVisible => {
-      console.log('isHeaderVisible', isVisible);
-    });
-    this.menuButtonClicked.subscribe(click => {
-      console.log('menuButtonClicked', click.current);
-    });
+  constructor(
+  ) { 
+   
   }
 
   clickMenuButton() {

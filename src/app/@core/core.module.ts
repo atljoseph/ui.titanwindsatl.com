@@ -7,11 +7,13 @@ import { CoreRoutingModule } from './core.routing';
 import { ModalModule } from '../@modal';
 import { MenuModule } from '../@menu';
 import { HeaderModule } from '../@header';
+import { FooterModule } from '../@footer';
 import { ContentModule } from '../@content';
 import { FeaturesModule } from '../@features';
 
-import { CoreService } from './core.service';
 import { LogService } from './log.service';
+import { CoreService } from './core.service';
+import { SeoService } from './seo.service';
 import { CoreComponent } from './core.component';
 
 @NgModule({
@@ -24,6 +26,7 @@ import { CoreComponent } from './core.component';
     CoreRoutingModule,
 
     HeaderModule,
+    FooterModule,
     ModalModule,
     ContentModule,
     MenuModule,
@@ -33,14 +36,17 @@ import { CoreComponent } from './core.component';
     CoreComponent
   ],
   providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (instance: LogService) => () => instance.appOnInit(),
+      deps: [LogService],
+      multi: true
+    },
     CoreService,
     {
       provide: APP_INITIALIZER,
-      useFactory: (instance: LogService) => {
-        // console.log(instance, FullScreenService);
-        return () => instance.appOnInit();
-      },
-      deps: [LogService],
+      useFactory: (instance: SeoService) => () => instance.appOnInit(),
+      deps: [SeoService],
       multi: true
     },
   ],

@@ -29,4 +29,4 @@ import {
     MatDialogModule
   ]
 })
-export class ThemeModule { }
+export class SharedModule { }

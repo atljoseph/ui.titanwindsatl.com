@@ -1,3 +1,56 @@
-:host {
-    height: 3rem;
+
+@import '../@shared/theme.scss';
+
+// :host {
+//     height: 1rem;
+// }
+
+$footerHeight: 0.75rem;
+
+.footer-placeholder {
+    height: $footerHeight;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: $footerHeight;
+
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+
+    &-horn {
+        height: inherit;
+        display: flex;
+        flex: 1.75;
+        background-color: $color-horn;
+    }
+    &-bassoon {
+        height: inherit;
+        display: flex;
+        flex: 1;
+        background-color: $color-bassoon;
+    }
+    &-clarinet {
+        height: inherit;
+        display: flex;
+        flex: 1;
+        background-color: $color-clarinet;
+    }
+    &-oboe {
+        height: inherit;
+        display: flex;
+        flex: 1;
+        background-color: $color-oboe;
+    }
+    &-flute {
+        height: inherit;
+        display: flex;
+        flex: 1;
+        background-color: $color-flute;
+    }
 }

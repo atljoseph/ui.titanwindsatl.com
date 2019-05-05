@@ -1,11 +1,15 @@
 <ng-container *ngIf="headerService.isHeaderVisible | async">
-  <mat-toolbar color="primary" class="header-toolbar">
-    <span class="header-title mat-body">Titan Winds <span class="header-title-long">Quintet</span></span>
-    <span class="greedy"></span>
-    <button mat-button 
-      #menuButton class="header-menu-button"
-      (click)="headerService.clickMenuButton()">
-      <mat-icon color="accent" class="header-menu-icon">menu</mat-icon>
-    </button>
-  </mat-toolbar>
+  <!-- fixed -->
+  <div >
+    <mat-toolbar color="primary" class="header-toolbar">
+      <span class="header-title mat-body">{{ headerService.headerTitleHtml | async }}</span>
+      <span class="greedy"></span>
+      <button mat-button #menuButton class="header-menu-button" (click)="headerService.clickMenuButton()">
+        <mat-icon color="accent" class="header-menu-icon">menu</mat-icon>
+      </button>
+    </mat-toolbar>
+  </div>
+
+  <!-- placeholder -->
+  <div class="header-toolbar-placeholder"></div>
 </ng-container>

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FooterModule } from '../@footer';
 
 import { ContentService } from './content.service';
 
@@ -13,7 +12,6 @@ import { ContentComponent } from './content.component';
   ],
   imports: [
     CommonModule,
-    FooterModule
   ],
   providers: [
     ContentService

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { environment } from '../../environments/environment';
 
-import { ICoreModuleService } from './core.types';
+import { ICoreModuleService } from '../@core/core.types';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +11,9 @@ export class LogService implements ICoreModuleService {
 
   logHandle: string = 'LogService';
 
-  constructor() {
-    this.info(`environment: ${environment.envCode}`, 'LogService.constructor()');
-  }
-
   appOnInit() {
+    this.info(`appOnInit()`, this.logHandle, {});
+    this.info(`environment: ${environment.envCode}`, this.logHandle);
   }
 
   info(message: string, trace?:string, data?: any, stringify?: boolean) {
